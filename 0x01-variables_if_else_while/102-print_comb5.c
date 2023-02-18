@@ -1,10 +1,10 @@
 #include <stdio.h>
-
 /**
- * main - prints all possible combinations of two two-digit numbers
+ * main - Entry point
  *
- * Return: Always (0) (Success)
+ * Return: Always (0) (success)
  */
+
 int main(void)
 {
 int i, j;
@@ -15,35 +15,20 @@ for (j = i; j < 100; j++)
 {
 if (i != j)
 {
-if (i < j)
-{
 putchar(i / 10 + '0');
 putchar(i % 10 + '0');
 putchar(' ');
 putchar(j / 10 + '0');
 putchar(j % 10 + '0');
-if (i < 98)
+if (i < 98 || j < 99)
 {
 putchar(',');
 putchar(' ');
-}
-}
-else
-{
-putchar(j / 10 + '0');
-putchar(j % 10 + '0');
-putchar(' ');
-putchar(i / 10 + '0');
-putchar(i % 10 + '0');
-if (j < 99)
-{
-putchar(',');
-putchar(' ');
-}
 }
 }
 }
 }
 putchar('\n');
+
 return (0);
 }
